@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "184c41c0-a498-44ef-9c72-e7bb0608325e": {
+      "ProjectGuid": "184c41c0-a498-44ef-9c72-e7bb0608325e",
+      "DisplayName": "Fruitkha",
+      "ColorIndex": 0
+    },
+    "4a1fecd4-619f-4a0f-9bdd-b975e20448cc": {
+      "ProjectGuid": "4a1fecd4-619f-4a0f-9bdd-b975e20448cc",
+      "DisplayName": "DataAccess",
+      "ColorIndex": 1
+    },
+    "c70283a8-e171-474c-9696-b8f0086d50c1": {
+      "ProjectGuid": "c70283a8-e171-474c-9696-b8f0086d50c1",
+      "DisplayName": "Entities",
+      "ColorIndex": 2
+    },
+    "c81b7b18-f758-4087-8ec0-0336d5fe9b34": {
+      "ProjectGuid": "c81b7b18-f758-4087-8ec0-0336d5fe9b34",
+      "DisplayName": "Services",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}
