@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class Free : Base
+    public class Sale : Base
     {
-        public string IconURL { get; set; }
         public string Title { get; set; }
-        public string Description { get; set; }
+        public string Decription { get; set; }
+        public string Sales { get; set; }
     }
 }
