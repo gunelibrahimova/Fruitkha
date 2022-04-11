@@ -12,3 +12,6 @@ C:\Users\HP\Desktop\Tasks\Fruitkha\DataAccess\obj\Debug\net6.0\DataAccess.dll
 C:\Users\HP\Desktop\Tasks\Fruitkha\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
 C:\Users\HP\Desktop\Tasks\Fruitkha\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 C:\Users\HP\Desktop\Tasks\Fruitkha\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
+C:\Users\HP\Desktop\Tasks\Fruitkha\DataAccess\bin\Debug\net6.0\Entities.dll
+C:\Users\HP\Desktop\Tasks\Fruitkha\DataAccess\bin\Debug\net6.0\Entities.pdb
+C:\Users\HP\Desktop\Tasks\Fruitkha\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
