@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "h4bRFnbuBZF2ifm1uc4GQqIyeblSFbFidprUOY7e5tk=",
+  "Hash": "4xKKcAiEL0q0aibNPFKautmCl+V9+N145MLuHI5QKzM=",
   "Source": "Fruitkha",
   "BasePath": "_content/Fruitkha",
   "Mode": "Default",
@@ -37857,6 +37857,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\Tasks\\Fruitkha\\Fruitkha\\wwwroot\\files\\bf6405c2-28c1-4591-b247-800146215f40AydanPaint.png",
+      "SourceId": "Fruitkha",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\Tasks\\Fruitkha\\Fruitkha\\wwwroot\\",
+      "BasePath": "_content/Fruitkha",
+      "RelativePath": "files/bf6405c2-28c1-4591-b247-800146215f40AydanPaint.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\bf6405c2-28c1-4591-b247-800146215f40AydanPaint.png"
     }
   ]
 }
