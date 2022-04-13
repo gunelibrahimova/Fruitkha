@@ -1,5 +1,6 @@
 ﻿using DataAccess;
 using Entities;
+using Microsoft.EntityFrameworkCore;
 using Services.Abstract;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace Services.Concrete
 
         public void Create(New news)
         {
+            news.PublishDate = DateTime.Now;
             _context.News.Add(news);
             _context.SaveChanges();
         }
@@ -38,13 +40,19 @@ namespace Services.Concrete
 
         public List<New> GetAll()
         {
-            return _context.News.ToList();
+            return _context.News.Include(x => x.K205User).ToList();
         }
 
-        public New GetById(int id)
+        public New GetById(int? id)
         {
-           var news = _context.News.FirstOrDefault(x=>x.Id == id);
+           var news = _context.News.Include(x=>x.K205User).FirstOrDefault(x=>x.Id == id);
             return news;
+        }
+
+        public New GetNewById(int id)
+        {
+            return _context.News.Include(x => x.K205UserId).FirstOrDefault(x => x.Id == id);
+
         }
     }
 }

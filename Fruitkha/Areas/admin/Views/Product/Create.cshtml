@@ -7,13 +7,9 @@
         <form method="post" asp-action="Create" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="PhotoURL" class="control-label"></label>
-               @* <input name="Image" type="file" class="form-control" />
-
-                <span asp-validation-for="PhotoURL" class="text-danger"></span>*@
-                <img src="@Model.PhotoURL" />
-                <input type="hidden" name="OldPhoto" value="@Model.PhotoURL" />
-                <input type="file" name="Image" />
+               <label asp-for="PhotoURL" class="control-label"></label>
+                <input name="Image" type="file" class="form-control" />
+                <span class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>

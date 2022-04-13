@@ -70,18 +70,30 @@ namespace Fruitkha.Areas.admin.Controllers
         }
 
         // GET: ProductController/Edit/5
-        public ActionResult Edit(int id)
+        public IActionResult Edit(int id)
         {
-            return View();
+            ViewBag.Categories = _categoryServices.GetAll();
+            var product = _productServices.GetById(id);
+            return View(product);
         }
 
         // POST: ProductController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<IActionResult> Edit(int id, Product product, IFormFile Image)
         {
+            if (Image != null)
+            {
+                string path = "/files/" + Guid.NewGuid() + Image.FileName;
+                using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
+                {
+                    await Image.CopyToAsync(fileStream);
+                }
+                product.PhotoURL = path;
+            }
             try
             {
+                _productServices.Edit(product);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -91,18 +103,20 @@ namespace Fruitkha.Areas.admin.Controllers
         }
 
         // GET: ProductController/Delete/5
-        public ActionResult Delete(int id)
+        public IActionResult Delete(int id)
         {
-            return View();
+            var product = _productServices.GetById(id);
+            return View(product);
         }
 
         // POST: ProductController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public IActionResult Delete(int id, Product product)
         {
             try
             {
+                _productServices.Delete(product);
                 return RedirectToAction(nameof(Index));
             }
             catch

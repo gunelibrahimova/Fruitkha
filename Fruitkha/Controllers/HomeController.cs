@@ -1,5 +1,7 @@
 ﻿using Fruitkha.Models;
+using Fruitkha.ViewModel;
 using Microsoft.AspNetCore.Mvc;
+using Services.Abstract;
 using System.Diagnostics;
 
 namespace Fruitkha.Controllers
@@ -7,15 +9,21 @@ namespace Fruitkha.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly INewServices _newServices;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, INewServices newServices)
         {
             _logger = logger;
+            _newServices = newServices;
         }
 
         public IActionResult Index()
         {
-            return View();
+            HomeVM vm = new()
+            {
+                News = _newServices.GetAll(),
+            };
+            return View(vm);
         }
 
         public IActionResult Privacy()
