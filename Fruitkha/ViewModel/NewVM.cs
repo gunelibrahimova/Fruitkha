@@ -2,7 +2,7 @@
 
 namespace Fruitkha.ViewModel
 {
-    public class ArticleVM
+    public class NewVM
     {
         public New NewSingle { get; set; }
         public List<New> News { get; set; }

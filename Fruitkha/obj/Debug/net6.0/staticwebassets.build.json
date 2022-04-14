@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iv+lckI9KtBMi1xdVb6LKMtyh5+itjh/+cpFBkhRfYA=",
+  "Hash": "W0GG7qfwN8g9muYMJaIkDTD9onOa+OnhOnwb0Y9k8C0=",
   "Source": "Fruitkha",
   "BasePath": "_content/Fruitkha",
   "Mode": "Default",
@@ -37859,6 +37859,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\webfonts\\fa-solid-900.woff2"
     },
     {
+      "Identity": "C:\\Users\\HP\\Desktop\\Tasks\\Fruitkha\\Fruitkha\\wwwroot\\files\\022dbfbc-2b74-4077-bb43-fff37832b0d8flowers-6895608_960_720.webp",
+      "SourceId": "Fruitkha",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\Tasks\\Fruitkha\\Fruitkha\\wwwroot\\",
+      "BasePath": "_content/Fruitkha",
+      "RelativePath": "files/022dbfbc-2b74-4077-bb43-fff37832b0d8flowers-6895608_960_720.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\022dbfbc-2b74-4077-bb43-fff37832b0d8flowers-6895608_960_720.webp"
+    },
+    {
       "Identity": "C:\\Users\\HP\\Desktop\\Tasks\\Fruitkha\\Fruitkha\\wwwroot\\files\\19dbb795-73c0-4ca4-b009-863995369119butterfly-4112665_960_720.webp",
       "SourceId": "Fruitkha",
       "SourceType": "Discovered",
@@ -38112,6 +38129,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\a3a94a95-39af-4519-b7a1-ffde45f8fa31butterfly-4112665_960_720.webp"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\Tasks\\Fruitkha\\Fruitkha\\wwwroot\\files\\ad4ae466-c1f1-457b-ac27-e6cfd3aea82fcat-7094808_960_720.webp",
+      "SourceId": "Fruitkha",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\Tasks\\Fruitkha\\Fruitkha\\wwwroot\\",
+      "BasePath": "_content/Fruitkha",
+      "RelativePath": "files/ad4ae466-c1f1-457b-ac27-e6cfd3aea82fcat-7094808_960_720.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\ad4ae466-c1f1-457b-ac27-e6cfd3aea82fcat-7094808_960_720.webp"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\Tasks\\Fruitkha\\Fruitkha\\wwwroot\\files\\bbfa595d-9c0c-4339-bc97-db26227299cbflowers-6895608_960_720.webp",
+      "SourceId": "Fruitkha",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\Tasks\\Fruitkha\\Fruitkha\\wwwroot\\",
+      "BasePath": "_content/Fruitkha",
+      "RelativePath": "files/bbfa595d-9c0c-4339-bc97-db26227299cbflowers-6895608_960_720.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\bbfa595d-9c0c-4339-bc97-db26227299cbflowers-6895608_960_720.webp"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\Tasks\\Fruitkha\\Fruitkha\\wwwroot\\files\\bf6405c2-28c1-4591-b247-800146215f40AydanPaint.png",

@@ -28,6 +28,9 @@ builder.Services.ConfigureApplicationCookie(option =>
 builder.Services.AddScoped<ICategoryServices, CategoryServices>();
 builder.Services.AddScoped<IProductServices, ProductServices>();
 builder.Services.AddScoped<INewServices, NewServices>();
+builder.Services.AddScoped<IFreshServices, FreshServices>();
+builder.Services.AddScoped<IFreeServices, FreeServices>();
+builder.Services.AddScoped<IDealServices, DealServices>();
 
 var app = builder.Build();
 

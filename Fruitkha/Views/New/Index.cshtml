@@ -1,4 +1,4 @@
-﻿@model ArticleVM
+﻿@model NewVM
 
 <!-- breadcrumb-section -->
 	<div class="breadcrumb-section breadcrumb-bg">
@@ -24,7 +24,7 @@
 						<div class="single-article-text">
 							<div class="single-artcile-bg"></div>
 							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> @Model.NewSingle.K205User.UserName</span>
+								<span class="author"><i class="fas fa-user"></i><a href="/New/Index/@Model.NewSingle.K205UserId">@Model.NewSingle.K205User.UserName</a> </span>
 								<span class="date"><i class="fas fa-calendar"></i> @Model.NewSingle.PublishDate.ToString("dd MM yyyy")</span>
 							</p>
 							<h2>@Model.NewSingle.Title</h2>
