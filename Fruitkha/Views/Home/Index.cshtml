@@ -147,48 +147,27 @@
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1 text-center">
 					<div class="testimonial-sliders">
-						<div class="single-testimonial-slider">
+						@foreach (var item in Model.Owners)
+						{
+							<div class="single-testimonial-slider">
 							<div class="client-avater">
-								<img src="assets/img/avaters/avatar1.png" alt="">
+								<img src="@item.PhotoRURL" alt="">
 							</div>
 							<div class="client-meta">
-								<h3>Saira Hakim <span>Local shop owner</span></h3>
+								<h3>@item.Title <span>@item.Decription</span></h3>
 								<p class="testimonial-body">
-									" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+									@item.Info
 								</p>
 								<div class="last-icon">
 									<i class="fas fa-quote-right"></i>
 								</div>
 							</div>
 						</div>
-						<div class="single-testimonial-slider">
-							<div class="client-avater">
-								<img src="assets/img/avaters/avatar2.png" alt="">
-							</div>
-							<div class="client-meta">
-								<h3>David Niph <span>Local shop owner</span></h3>
-								<p class="testimonial-body">
-									" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
-								</p>
-								<div class="last-icon">
-									<i class="fas fa-quote-right"></i>
-								</div>
-							</div>
-						</div>
-						<div class="single-testimonial-slider">
-							<div class="client-avater">
-								<img src="assets/img/avaters/avatar3.png" alt="">
-							</div>
-							<div class="client-meta">
-								<h3>Jacob Sikim <span>Local shop owner</span></h3>
-								<p class="testimonial-body">
-									" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
-								</p>
-								<div class="last-icon">
-									<i class="fas fa-quote-right"></i>
-								</div>
-							</div>
-						</div>
+						
+						}
+						
+						
+						
 					</div>
 				</div>
 			</div>
@@ -246,7 +225,7 @@
 				{
 					<div class="col-lg-4 col-md-6">
 					<div class="single-latest-news">
-						<a href="/new"><div class="latest-news-bg news-bg-1"></div></a>
+						<a href="new/index/@item.Id"><div class="latest-news-bg news-bg-1"></div></a>
 						<div class="news-text-box">
 							<h3><a href="/new/@item.Id">@item.Title</a></h3>
 							<p class="blog-meta">
@@ -254,7 +233,7 @@
 								<span class="date"><i class="fas fa-calendar"></i>@item.PublishDate</span>
 							</p>
 							<p class="excerpt">@item.Description</p>
-							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+							<a href="new/index/@item.Id" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
 						</div>
 					</div>
 				</div>

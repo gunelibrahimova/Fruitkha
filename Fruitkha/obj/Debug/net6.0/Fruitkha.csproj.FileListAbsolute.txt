@@ -277,3 +277,7 @@ C:\Users\HP\Desktop\Tasks\Fruitkha\Fruitkha\obj\Debug\net6.0\scopedcss\Areas\adm
 C:\Users\HP\Desktop\Tasks\Fruitkha\Fruitkha\bin\Debug\net6.0\Services.dll
 C:\Users\HP\Desktop\Tasks\Fruitkha\Fruitkha\bin\Debug\net6.0\Services.pdb
 C:\Users\HP\Desktop\Tasks\Fruitkha\Fruitkha\obj\Debug\net6.0\scopedcss\Areas\admin\Views\Shared\_LayoutAuth.cshtml.rz.scp.css
+C:\Users\HP\Desktop\Tasks\Fruitkha\Fruitkha\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\HP\Desktop\Tasks\Fruitkha\Fruitkha\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\HP\Desktop\Tasks\Fruitkha\Fruitkha\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\HP\Desktop\Tasks\Fruitkha\Fruitkha\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll

@@ -13,14 +13,16 @@ namespace Fruitkha.Controllers
         private readonly IFreshServices _freshServices;
         private readonly IFreeServices _freeServices;
         private readonly IDealServices _dealServices;
+        private readonly IOwnerServices _ownerServices;
 
-        public HomeController(ILogger<HomeController> logger, INewServices newServices, IFreshServices freshServices, IFreeServices freeServices, IDealServices dealServices)
+        public HomeController(ILogger<HomeController> logger, INewServices newServices, IFreshServices freshServices, IFreeServices freeServices, IDealServices dealServices, IOwnerServices ownerServices)
         {
             _logger = logger;
             _newServices = newServices;
             _freshServices = freshServices;
             _freeServices = freeServices;
             _dealServices = dealServices;
+            _ownerServices = ownerServices;
         }
 
         public IActionResult Index()
@@ -31,6 +33,7 @@ namespace Fruitkha.Controllers
                 Freshs = _freshServices.GetAll(),
                 Frees = _freeServices.GetAll(),
                 Deals = _dealServices.GetAll(),
+                Owners = _ownerServices.GetAll(),
             };
             return View(vm);
         }
