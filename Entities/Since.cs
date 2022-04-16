@@ -8,6 +8,7 @@ namespace Entities
 {
     public class Since : Base
     {
+        public string Video { get; set; }
         public string Date { get; set; }
         public string Title { get; set; }
         public string Decription { get; set; }

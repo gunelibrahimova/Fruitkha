@@ -25,6 +25,9 @@ namespace Fruitkha.Controllers
         public IActionResult Index(int? id)
         {
             var news = _newServices.GetById(id);
+            var comments = _commentManager.GetNewComment(news.Id);
+
+            ViewBag.Comments = comments.Count;
             NewVM vm = new()
             {
                 NewSingle = news,
@@ -45,3 +48,5 @@ namespace Fruitkha.Controllers
         }
     }
 }
+
+

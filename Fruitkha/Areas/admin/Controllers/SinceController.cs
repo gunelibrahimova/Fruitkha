@@ -1,16 +1,34 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Services.Abstract;
 
-namespace Fruitkha.Areas.admin.Controllers
+
+
+namespace Fruitkhhaa.Areas.admin.Controllers
 {
     [Area("admin")]
     public class SinceController : Controller
     {
+        private readonly ISinceServices _sinceManager;
+
+
+
+        public SinceController(ISinceServices sinceManager)
+        {
+            _sinceManager = sinceManager;
+        }
+
+
+
         // GET: SinceController
         public IActionResult Index()
         {
-            return View();
+            var since = _sinceManager.GetAll();
+            return View(since);
         }
+
+
 
         // GET: SinceController/Details/5
         public ActionResult Details(int id)
@@ -18,19 +36,24 @@ namespace Fruitkha.Areas.admin.Controllers
             return View();
         }
 
+
+
         // GET: SinceController/Create
-        public ActionResult Create()
+        public IActionResult Create()
         {
             return View();
         }
+
+
 
         // POST: SinceController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public IActionResult Create(Since since)
         {
             try
             {
+                _sinceManager.Create(since);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -39,19 +62,25 @@ namespace Fruitkha.Areas.admin.Controllers
             }
         }
 
+
+
         // GET: SinceController/Edit/5
-        public ActionResult Edit(int id)
+        public IActionResult Edit(int id)
         {
-            return View();
+            var since = _sinceManager.GetById(id);
+            return View(since);
         }
+
+
 
         // POST: SinceController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public IActionResult Edit(int id, Since since)
         {
             try
             {
+                _sinceManager.Edit(since);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -60,19 +89,25 @@ namespace Fruitkha.Areas.admin.Controllers
             }
         }
 
+
+
         // GET: SinceController/Delete/5
-        public ActionResult Delete(int id)
+        public IActionResult Delete(int id)
         {
-            return View();
+            var since = _sinceManager.GetById(id);
+            return View(since);
         }
+
+
 
         // POST: SinceController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public IActionResult Delete(int id, Since since)
         {
             try
             {
+                _sinceManager.Delete(since);
                 return RedirectToAction(nameof(Index));
             }
             catch

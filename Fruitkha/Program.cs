@@ -34,6 +34,7 @@ builder.Services.AddScoped<IDealServices, DealServices>();
 builder.Services.AddScoped<IOwnerServices, OwnerServices>();
 builder.Services.AddScoped<ISaleServices, SaleServices>();
 builder.Services.AddScoped<ICommentServices, CommentServices>();
+builder.Services.AddScoped<ISinceServices, SinceServices>();
 
 var app = builder.Build();
 

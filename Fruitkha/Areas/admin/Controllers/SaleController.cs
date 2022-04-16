@@ -1,15 +1,25 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Services.Abstract;
 
 namespace Fruitkha.Areas.admin.Controllers
 {
     [Area("admin")]
     public class SaleController : Controller
     {
+        private readonly ISaleServices _saleServices;
+
+        public SaleController(ISaleServices saleServices)
+        {
+            _saleServices = saleServices;
+        }
+
         // GET: SaleController
         public IActionResult Index()
         {
-            return View();
+            var sale = _saleServices.GetAll();
+            return View(sale);
         }
 
         // GET: SaleController/Details/5
@@ -19,7 +29,7 @@ namespace Fruitkha.Areas.admin.Controllers
         }
 
         // GET: SaleController/Create
-        public ActionResult Create()
+        public IActionResult Create()
         {
             return View();
         }
@@ -27,10 +37,11 @@ namespace Fruitkha.Areas.admin.Controllers
         // POST: SaleController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public IActionResult Create(Sale sale)
         {
             try
             {
+                _saleServices.Create(sale);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -40,18 +51,20 @@ namespace Fruitkha.Areas.admin.Controllers
         }
 
         // GET: SaleController/Edit/5
-        public ActionResult Edit(int id)
+        public IActionResult Edit(int id)
         {
-            return View();
+            var sale = _saleServices.GetById(id);
+            return View(sale);
         }
 
         // POST: SaleController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public IActionResult Edit(int id, Sale sale)
         {
             try
             {
+                _saleServices.Edit(sale);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -61,18 +74,20 @@ namespace Fruitkha.Areas.admin.Controllers
         }
 
         // GET: SaleController/Delete/5
-        public ActionResult Delete(int id)
+        public IActionResult Delete(int id)
         {
-            return View();
+            var sale = _saleServices.GetById(id);
+            return View(sale);
         }
 
         // POST: SaleController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public IActionResult Delete(int id, Sale sale)
         {
             try
             {
+                _saleServices.Delete(sale);
                 return RedirectToAction(nameof(Index));
             }
             catch
