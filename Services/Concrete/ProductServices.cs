@@ -47,5 +47,10 @@ namespace Services.Concrete
             return product;
 
         }
+
+        public List<Product> GetSingleProduct(int id)
+        {
+            return _context.Products.Where(x => x.Id == id).ToList();
+        }
     }
 }

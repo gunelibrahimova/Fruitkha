@@ -38,8 +38,8 @@ namespace Fruitkha.Controllers
             HomeVM vm = new()
             {
                 News = _newServices.GetAll(),
-                Freshs = _freshServices.GetAll(),
-                Frees = _freeServices.GetAll(),
+                Freshs = _freshServices.GetFreshAll(),
+                Frees = _freeServices.GetFreeAll(),
                 Deals = _dealServices.GetAll(),
                 Owners = _ownerServices.GetAll(),
                 Products = _productServices.GetAll(),

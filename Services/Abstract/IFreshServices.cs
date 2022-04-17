@@ -10,6 +10,8 @@ namespace Services.Abstract
     public interface IFreshServices
     {
         List<Fresh> GetAll();
+        List<Fresh> GetFreshAll();
+        List<Fresh> GetFreshById(int id);
         Fresh GetById(int? id);
         void Create(Fresh fresh);
         void Edit(Fresh fresh);

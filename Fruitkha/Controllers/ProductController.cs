@@ -8,11 +8,13 @@ namespace Fruitkha.Controllers
     {
         private readonly IProductServices _productServices;
         private readonly ICategoryServices _categoryServices;
+        private readonly IFreshServices _freshServices;
 
-        public ProductController(IProductServices productServices, ICategoryServices categoryServices)
+        public ProductController(IProductServices productServices, ICategoryServices categoryServices, IFreshServices freshServices)
         {
             _productServices = productServices;
             _categoryServices = categoryServices;
+            _freshServices = freshServices;
         }
 
         public IActionResult Index(int? id)
@@ -23,8 +25,8 @@ namespace Fruitkha.Controllers
             {
                 Productsingle = products,
                 Categories = _categoryServices.GetAll(),
-                Products = _productServices.GetAll()
-
+                Products = _productServices.GetAll(),
+                FreshProducts = _freshServices.GetFreshById(5)
 
             };
             return View(vm);

@@ -11,6 +11,7 @@ namespace Services.Abstract
     {
         List<Product> GetAll();
         Product GetById(int id);
+        List<Product> GetSingleProduct(int id);
         void Create(Product product);
         void Edit(Product product);
         void Delete(Product product);

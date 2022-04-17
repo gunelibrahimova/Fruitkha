@@ -34,6 +34,7 @@ namespace Services.Concrete
 
         public void Edit(New news)
         {
+            news.PublishDate = DateTime.Now;
             _context.News.Update(news);
             _context.SaveChanges();
         }

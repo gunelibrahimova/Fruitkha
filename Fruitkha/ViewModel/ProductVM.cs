@@ -7,5 +7,6 @@ namespace Fruitkha.ViewModel
         public Product Productsingle { get; set; }
         public List<Product> Products { get; set;}
         public List<Category> Categories { get; set; }
+        public List<Fresh> FreshProducts { get; set; }
     }
 }

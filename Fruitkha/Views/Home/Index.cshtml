@@ -79,7 +79,7 @@
 							<a href="product/index/@item.Id"><img src="@item.PhotoURL" alt=""></a>
 						</div>
 						<h3>@item.Category.Name</h3>
-						<p class="product-price"><span>@item.Description</span> @item.Price</p>
+						<p class="product-price"><span>@item.Description</span> @item.Price $</p>
 						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 					</div>
 				</div>
@@ -189,16 +189,16 @@
 	
 	<!-- shop banner -->
 	<section class="shop-banner">
-    	<div class="container">
-			@foreach (var item in Model.Sales)
-			{
-				<h3>@item.Title</h3>
-            <div class="sale-percent"><span>@item.Decription</span> <span>@item.Sales</span></div>
-            <a href="shop.html" class="cart-btn btn-lg">Shop Now</a>
-			}
-        	
-        </div>
-    </section>
+	<div class="container">
+		@foreach (var item in Model.Sales)
+		{
+			<h3>@item.Title</h3>
+			<div class="sale-percent"><span>@item.Decription</span>@item.Sales </div>
+			<a href="shop.html" class="cart-btn btn-lg">Shop Now</a>
+		}
+		
+	</div>
+</section>
 	<!-- end shop banner -->
 
 	<!-- latest news -->

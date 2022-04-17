@@ -46,5 +46,15 @@ namespace Services.Concrete
             return _context.Freshes.FirstOrDefault(x => x.Id == id);
 
         }
+
+        public List<Fresh> GetFreshAll()
+        {
+           return _context.Freshes.Take(3).ToList();
+        }
+
+        public List<Fresh> GetFreshById(int id)
+        {
+            return _context.Freshes.Where(x=>x.Id == id).ToList();
+        }
     }
 }

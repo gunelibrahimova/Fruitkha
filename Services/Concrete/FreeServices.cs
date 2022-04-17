@@ -45,5 +45,15 @@ namespace Services.Concrete
         {
             return _context.Frees.FirstOrDefault(x => x.Id == id);
         }
+
+        public List<Free> GetFreeAll()
+        {
+            return _context.Frees.Take(3).ToList();
+        }
+
+        public List<Free> GetFreeById(int id)
+        {
+            return _context.Frees.Where(x=>x.Id == id).ToList();
+        }
     }
 }

@@ -11,6 +11,8 @@ namespace Services.Abstract
     {
         List<Free> GetAll();
         Free GetById(int? id);
+        List<Free> GetFreeById(int id);
+        List<Free> GetFreeAll();
         void Create(Free free);
         void Edit(Free free);
         void Delete(Free free);

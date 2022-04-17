@@ -9,5 +9,6 @@ namespace Fruitkha.ViewModel
         public K205User User { get; set; }
         public List<Comment> Comments { get; set; }
         public Comment Comment { get; set; }
+        public List<Fresh> FreshNews { get; set; }
     }
 }

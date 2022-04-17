@@ -12,14 +12,16 @@ namespace Fruitkha.Controllers
         private readonly UserManager<K205User> _userManager;
         private readonly ICommentServices _commentManager;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IFreshServices _freshServices;
 
 
-        public NewController(INewServices newServices, UserManager<K205User> userManager, IHttpContextAccessor httpContextAccessor, ICommentServices commentManager)
+        public NewController(INewServices newServices, UserManager<K205User> userManager, IHttpContextAccessor httpContextAccessor, ICommentServices commentManager, IFreshServices freshServices)
         {
             _newServices = newServices;
             _userManager = userManager;
             _httpContextAccessor = httpContextAccessor;
             _commentManager = commentManager;
+            _freshServices = freshServices;
         }
 
         public IActionResult Index(int? id)
@@ -33,7 +35,8 @@ namespace Fruitkha.Controllers
                 NewSingle = news,
                 User = _userManager.FindByIdAsync(news.K205UserId).Result,
                 Comments = _commentManager.GetNewComment(news.Id),
-                News = _newServices.GetAll()
+                News = _newServices.GetAll(),
+                FreshNews = _freshServices.GetFreshById(6)
             };
             return View(vm);
         }
