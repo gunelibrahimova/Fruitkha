@@ -35,7 +35,7 @@ namespace Fruitkha.Controllers
         {
             HomeVM vm = new()
             {
-                News = _newServices.GetAll(),
+                News = _newServices.GetNewAll(),
                 Freshs = _freshServices.GetFreshById(7),
                 Frees = _freeServices.GetAll(),
                 Deals = _dealServices.GetAll(),

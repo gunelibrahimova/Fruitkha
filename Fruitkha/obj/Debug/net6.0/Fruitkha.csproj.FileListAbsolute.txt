@@ -281,3 +281,5 @@ C:\Users\HP\Desktop\Tasks\Fruitkha\Fruitkha\bin\Debug\net6.0\Microsoft.OpenApi.d
 C:\Users\HP\Desktop\Tasks\Fruitkha\Fruitkha\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\HP\Desktop\Tasks\Fruitkha\Fruitkha\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\HP\Desktop\Tasks\Fruitkha\Fruitkha\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\HP\Desktop\Tasks\Fruitkha\Fruitkha\bin\Debug\net6.0\Helper.dll
+C:\Users\HP\Desktop\Tasks\Fruitkha\Fruitkha\bin\Debug\net6.0\Helper.pdb

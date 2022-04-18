@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using Core.Helper;
+using Entities;
 
 namespace Fruitkha.ViewModel
 {
@@ -10,5 +11,6 @@ namespace Fruitkha.ViewModel
         public List<Comment> Comments { get; set; }
         public Comment Comment { get; set; }
         public List<Fresh> FreshNews { get; set; }
+        public Pager Pager { get; set; }
     }
 }

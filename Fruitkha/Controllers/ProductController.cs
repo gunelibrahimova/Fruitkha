@@ -26,7 +26,8 @@ namespace Fruitkha.Controllers
                 Productsingle = products,
                 Categories = _categoryServices.GetAll(),
                 Products = _productServices.GetAll(),
-                FreshProducts = _freshServices.GetFreshById(5)
+                FreshProducts = _freshServices.GetFreshById(5),
+                
 
             };
             return View(vm);

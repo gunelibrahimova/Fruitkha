@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using Core.Helper;
+using Entities;
 
 namespace Fruitkha.ViewModel
 {
@@ -14,6 +15,7 @@ namespace Fruitkha.ViewModel
         public List<Since> Since { get; set; }
         public List<Sale> Sales { get; set; }
         public List<Category> Categories { get; set; }
+        public Pager Pager { get; set; }
         
     }
 }

@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using Core.Helper;
+using Entities;
 using Fruitkha.ViewModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -35,9 +36,10 @@ namespace Fruitkha.Controllers
                 NewSingle = news,
                 User = _userManager.FindByIdAsync(news.K205UserId).Result,
                 Comments = _commentManager.GetNewComment(news.Id),
+                FreshNews = _freshServices.GetFreshById(6),
                 News = _newServices.GetAll(),
-                FreshNews = _freshServices.GetFreshById(6)
             };
+            
             return View(vm);
         }
 

@@ -1,4 +1,5 @@
-﻿using Fruitkha.ViewModel;
+﻿using Core.Helper;
+using Fruitkha.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Services.Abstract;
 
@@ -18,14 +19,15 @@ namespace Fruitkha.Controllers
 
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? recordSize = 6, int? pageNo = 1)
         {
             HomeVM vm = new()
             {
-                News = _newServices.GetAll(),
                 Freshs = _freshServices.GetFreshById(9),
-                
+                News = _newServices.GetAll(pageNo, recordSize.Value),
+
             };
+            vm.Pager = new Pager(_newServices.GetAllCount(), pageNo, 2, 3);
             return View(vm);
         }
     }
