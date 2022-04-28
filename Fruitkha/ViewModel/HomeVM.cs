@@ -16,6 +16,7 @@ namespace Fruitkha.ViewModel
         public List<Sale> Sales { get; set; }
         public List<Category> Categories { get; set; }
         public Pager Pager { get; set; }
+        public List<Check> Check { get; set; }
         
     }
 }

@@ -18,8 +18,9 @@ namespace Fruitkha.Controllers
         private readonly ICategoryServices _categoryServices;
         private readonly ISinceServices _sinceServices;
        private readonly ISaleServices _saleServices;
+        private readonly ICheckServices _checkServices;
 
-        public HomeController(ILogger<HomeController> logger, INewServices newServices, IFreshServices freshServices, IFreeServices freeServices, IDealServices dealServices, IOwnerServices ownerServices, IProductServices productServices, ICategoryServices categoryServices, ISinceServices sinceServices, ISaleServices saleServices)
+        public HomeController(ILogger<HomeController> logger, INewServices newServices, IFreshServices freshServices, IFreeServices freeServices, IDealServices dealServices, IOwnerServices ownerServices, IProductServices productServices, ICategoryServices categoryServices, ISinceServices sinceServices, ISaleServices saleServices, ICheckServices checkServices)
         {
             _logger = logger;
             _newServices = newServices;
@@ -31,6 +32,7 @@ namespace Fruitkha.Controllers
             _categoryServices = categoryServices;
             _sinceServices = sinceServices;
             _saleServices = saleServices;
+            _checkServices = checkServices;
         }
 
         public IActionResult Index()

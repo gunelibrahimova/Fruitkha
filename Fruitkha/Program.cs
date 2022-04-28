@@ -36,6 +36,7 @@ builder.Services.AddScoped<ISaleServices, SaleServices>();
 builder.Services.AddScoped<ICommentServices, CommentServices>();
 builder.Services.AddScoped<ISinceServices, SinceServices>();
 builder.Services.AddScoped<IContectServices, ContactServices>();
+builder.Services.AddScoped<ICheckServices, CheckServices>();
 
 var app = builder.Build();
 
