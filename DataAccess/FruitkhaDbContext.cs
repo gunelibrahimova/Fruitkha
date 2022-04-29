@@ -30,7 +30,7 @@ namespace DataAccess
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Fresh> Freshes { get; set; }
         public DbSet<Contact> Contacts { get; set; }
-        public DbSet<Check> Checks { get; set; }
+        public DbSet<Checkout> Checks { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)

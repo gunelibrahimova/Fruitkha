@@ -18,35 +18,20 @@ namespace Services.Concrete
         {
             _context = context;
         }
-        public void Create(Check check)
-        {
-            throw new NotImplementedException();
-        }
 
-        public void Delete(Check check)
+        public List<Checkout> GetAll()
         {
-            throw new NotImplementedException();
-        }
-
-        public void Edit(Check check)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Check> GetAll()
-        {
-            var check = _context.Checks.Include(x=>x.Product).ToList();
+            var check = _context.Checks.ToList();
             return check;
         }
 
-        public Check GetById(int? id)
-        {
-            throw new NotImplementedException();
-        }
+        
 
-        public List<Check> GetCheckById(int id)
+      
+        public void Post(Checkout checkout)
         {
-            throw new NotImplementedException();
+            _context.Checks.Add(checkout);
+            _context.SaveChanges();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Fruitkha.ViewModel;
+﻿using Entities;
+using Fruitkha.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Services.Abstract;
 
@@ -19,17 +20,29 @@ namespace Fruitkha.Controllers
             _categoryServices = categoryServices;
         }
 
-        public IActionResult Index()
+
+
+        public IActionResult Index(int? id)
         {
+            var product = _productServices.GetById(id.Value);
+
             HomeVM vm = new()
             {
+                Productsingle = product,
                 Freshs = _freshServices.GetFreshById(11),
-                Check = _checkServices.GetAll(),
+                
                 Products = _productServices.GetAll(),
                 Categories = _categoryServices.GetAll(),
 
             };
             return View(vm);
+        }
+
+        [HttpPost]
+        public IActionResult Index(Checkout checkout)
+        {
+            _checkServices.Post(checkout);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
